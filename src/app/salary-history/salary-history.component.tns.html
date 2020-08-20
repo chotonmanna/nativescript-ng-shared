@@ -1,0 +1,44 @@
+<ActionBar [title]="title">
+  <ActionItem [nsRouterLink]="['/']" icon="font://&#xf015;" class="fas" ios.position="right">
+  </ActionItem>
+</ActionBar>
+
+<GridLayout class="screen">
+  <ScrollView>
+    <ListView [items]="countries" separatorColor="transparent">
+      <ng-template let-country="item" let-i="index">
+        <FlexboxLayout flexDirection="column" class="accordion-container">
+          <FlexboxLayout class="accordion-header" justifyContent="space-between" (tap)="togglePanel(i)">
+            <FlexboxLayout>
+              <Label text="10.10.2020"></Label>
+              <Label text="-"></Label>
+              <Label text="10.10.2022"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout>
+              <Label *ngIf="!country.visibility || country.visibility === 'collapse'" text="&#xf078;" class="fas pull-right"></Label>
+              <Label *ngIf="country.visibility === 'visible'" text="&#xf077;" class="fas pull-right"></Label>
+            </FlexboxLayout>
+          </FlexboxLayout>
+          <FlexboxLayout flexDirection="column" class="accordion-content" [visibility]="!country.visibility ? 'collapse' : country.visibility">
+            <FlexboxLayout class="content-item" justifyContent="space-between">
+              <Label class="tab-heading" text="Period of time"></Label>
+              <Label class="tab-val" text="07.02.2020 - 09.03.2020"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout justifyContent="space-between">
+              <Label class="tab-heading" text="Position Percentage"></Label>
+              <Label class="tab-val" text="40%"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout justifyContent="space-between">
+              <Label class="tab-heading" text="Salary"></Label>
+              <Label class="tab-val" text="70674 NOK"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout justifyContent="space-between">
+              <Label class="tab-heading" text="Annual Amount"></Label>
+              <Label class="tab-val" text="70672 NOK"></Label>
+            </FlexboxLayout>
+          </FlexboxLayout>
+        </FlexboxLayout>
+      </ng-template>
+    </ListView>
+  </ScrollView>
+</GridLayout>

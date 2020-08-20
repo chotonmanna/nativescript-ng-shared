@@ -1,0 +1,19 @@
+<ActionBar [title]="title"></ActionBar>
+<StackLayout>
+  <Label text="heading" class="h2" textWrap="true"></Label>
+  <Label [text]="heading" class="h2" textWrap="true"></Label>
+  <Image *ngIf="uploadImg" [src]="uploadImg.src" class="thumb img-circle"></Image>
+  <app-file-upload-mobile (getUploadedImage)="getUploadedImage($event)"></app-file-upload-mobile>
+  <!-- <ActivityIndicator busy="true" color="red" width="100" height="100"></ActivityIndicator> -->
+
+  <ListView [items]="users" style="height:1250px">
+    <ng-template let-user="item">
+      <FlexboxLayout flexDirection="row">
+        <Image [src]="user.imageSrc" class="thumb img-circle"></Image>
+        <Label [text]="user.name" class="t-12" verticalAlignment="center" style="width: 60%"></Label>
+      </FlexboxLayout>
+    </ng-template>
+  </ListView>
+
+  <RadDataForm tkExampleTitle tkToggleNavButton [source]="person"></RadDataForm>
+</StackLayout>

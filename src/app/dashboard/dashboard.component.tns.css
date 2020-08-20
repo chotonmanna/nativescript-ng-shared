@@ -1,0 +1,19 @@
+.card {
+  background-color: #eeeeee;
+  margin: 15 15 0;
+}
+.card-layout {
+  padding: 50px;
+}
+.card-layout .h2 {
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
+.card-layout .body {
+  color: darkgray;
+}
+
+.card-img {
+  width: 100%;
+}

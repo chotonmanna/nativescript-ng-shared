@@ -1,0 +1,27 @@
+.screen {
+  margin: 10;
+}
+
+.back-icon {
+  width: 50px;
+}
+
+.accordion-container {
+  border-bottom-style: solid;
+  border-bottom-width: 2;
+  border-bottom-color: gainsboro;
+}
+
+.accordion-header {
+  font-weight: 400;
+  font-size: 20;
+}
+
+.pull-right {
+  font-size: 30;
+}
+
+.tab-heading {
+  font-size: 16;
+  font-weight: 500;
+}

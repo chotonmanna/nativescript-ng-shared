@@ -1,0 +1,18 @@
+<ActionBar [title]="title">
+  <ActionItem position="left" icon="font://&#xf0c9;" class="fas" (tap)="openMenuBar()"></ActionItem>
+</ActionBar>
+<GridLayout>
+  <ScrollView class="page">
+    <StackLayout>
+      <ng-container *ngFor="let item of data">
+        <MDCardView [nsRouterLink]="['/', item.url]" class="card">
+          <StackLayout class="card-layout">
+            <Image [src]="'~/assets/images/' + item.image" class="card-img"></Image>
+            <Label class="h2" [text]="item.heading"></Label>
+            <Label class="body" textWrap="true" [text]="item.content"></Label>
+          </StackLayout>
+        </MDCardView>
+      </ng-container>
+    </StackLayout>
+  </ScrollView>
+</GridLayout>

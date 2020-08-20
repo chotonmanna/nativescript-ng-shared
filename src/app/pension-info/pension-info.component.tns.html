@@ -1,0 +1,24 @@
+<ActionBar [title]="title">
+  <ActionItem [nsRouterLink]="['/']" icon="font://&#xf015;" class="fas" ios.position="right">
+  </ActionItem>
+</ActionBar>
+<ScrollView>
+  <FlexboxLayout flexDirection="column">
+    <Button text="Change Account Number" (tap)="onTap()"></Button>
+    <!-- <ListPicker 
+      [items]="items" 
+      class="picker" 
+      (selectedIndexChange)="onSelectedIndexChange($event)">
+    </ListPicker> -->
+    <DropDown #dd
+      class="default"
+      backroundColor="red" 
+      itemsTextAlignment="center" 
+      [items]="items"
+      [(ngModel)]="selectedIndex"
+      (selectedIndexChanged)="onSelectedIndexChange($event)" 
+      (opened)="onopen()" 
+      (closed)="onclose()">
+    </DropDown>
+  </FlexboxLayout>
+</ScrollView>

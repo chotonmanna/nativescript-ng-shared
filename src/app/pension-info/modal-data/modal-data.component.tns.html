@@ -1,0 +1,22 @@
+<ScrollView>
+  <FlexboxLayout flexDirection="column" class="modal-content">
+    <FlexboxLayout flexDirection="column">
+      <Label [text]="modalText_1" textWrap="true" class="modal-text-1"></Label>
+      <Label [text]="modalText_2"></Label>
+      <Label [text]="modalText_3"></Label>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="column">
+      <TextField 
+        hint="Only Norwegian Account Number" 
+        secure="false"
+        returnKeyType="done"
+        maxLength="11"
+        keyboardType="integer"
+        style="width: 100%;"
+        color="orangered" 
+        backgroundColor="lightyellow">
+      </TextField>
+      <Button text="Save" class="-outline -rounded-sm" isEnabled="false"></Button>
+    </FlexboxLayout>
+  </FlexboxLayout>
+</ScrollView>
